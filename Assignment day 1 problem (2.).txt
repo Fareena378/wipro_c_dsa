@@ -1,0 +1,33 @@
+ASSIGNMENT DAY1
+
+Problem 2
+
+Search a given element in the given sorted array.
+
+
+BINARY SEARCH
+
+Pseudocode:
+
+1. input arr={34, 45, 78, 78, 90, 100}
+2. Arrange the array in ascending order
+3. input search element as x, mid = mid, left = left, right = right.
+4. mid = left + (right - left)/2
+5. Repeat the step 4 until left <= right 
+6. if x == arr[mid], print(search element is found, mid)
+7. if x > arr[mid], since array is sorted update left index value will be equal mid + 1 in our new half of the array we have to search
+8. Print left_index = midIndex + 1; 
+9. if x < arr[mid], since array is sorted update right index value will be equal mid -1 in our new half of the array we have to search
+10. Print right_index = midIndex - 1;
+
+
+Explanation:
+
+Binary search is used to search the element in the sorted list of array. Half of the array is eliminated during each step.
+The time complexity of Binary Search is O(log n), where n represents the number of elements in the sorted array. It follows a divide-and-conquer approach,
+reducing the search space in half at each iteration.
+The space complexity of the iterative Binary Search is O(1) (constant).
+The logarithmic behavior ensures efficient searching even for large arrays.
+
+
+
