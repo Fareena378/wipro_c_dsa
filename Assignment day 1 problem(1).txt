@@ -1,0 +1,36 @@
+
+ASSIGNMENT DAY 1
+Problem 1
+
+
+LINEAR SEARCH
+
+
+pseudocode for linear search 
+
+input list of array as list(arr)={23, 56, 67,78}
+input search element as x
+for i=0 to n-1 (i=o, i<=n-1, i++)
+if arr[i]==x
+return i
+repeat the loop 
+return -1
+
+Explanation:
+
+Linear search is used to search the element in the list of array. It visit each element starting from one by one, while standing each element 
+compare with searched element. If the search element is found it will return the position. If it is not found it will return some bogus or 
+non-used position.
+Speed of algorithm = Time of complexity = 0(N).
+For large dataset linear search is not very efficient.
+For small datasets it is perfect.
+It is very simple to implement in C.
+It works on Unsorted list.
+
+
+
+
+
+
+
+
