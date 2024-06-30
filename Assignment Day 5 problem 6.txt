@@ -1,0 +1,167 @@
+ASSIGNMENT DAY 5,JUN 28
+
+
+1.Writa a C program that will create an array of 95 characters,store all 95 printable ASCII code table characters in it starting ASCII code 32 to 126.Then print 
+all the characters stored in array and while printing also tell their category
+Category is like this:
+Category 1:Alphabet,small case letter
+Category 2:Alphabet,capital case letter
+Category 3:Numeric Digit
+Category 4:General Printable Character
+ Output sample:
+Character		Category
+--------------  ---------------------------
+			    General Printable Character
+!				General Printable Character
+.
+.
+.
+.
+0				Nemerical Digit
+.
+.
+.
+A 				Alphabet, capital case letter
+.
+.
+a 				Alphabet, small case letter
+has context menu
+
+
+Code
+
+#include <stdio.h>
+
+int main() {
+    char ASCII[95];  // Array to store ASCII characters
+    int i;
+    
+    for (i = 0; i < 95; i++) {
+        ASCII[i] = 32 + i;
+    }
+    //// Fill the array with ASCII characters from ASCII code 32 to 126
+   
+    printf("Character\t\tCategory\n"); // Print the header
+    printf("--------------\t--------------\n");
+    
+    for (i = 0; i < 95; i++) {
+        char ch = ASCII[i];
+        printf("%c\t\t\t", ch);
+        //print each character and its category
+        
+        if (ch >= 'A' && ch <= 'Z') {
+            printf("Alphabet, capital case letter\n");
+        } else if (ch >= 'a' && ch <= 'z') {
+            printf("Alphabet, small case letter\n");
+        } else if (ch >= '0' && ch <= '9') {
+            printf("Numerical Digit\n");
+        } else {
+            printf("General Printable Character\n");
+        }
+    }
+    
+    return 0;
+}
+
+output:
+
+Character		Category
+--------------	--------------
+ 			General Printable Character
+!			General Printable Character
+"			General Printable Character
+#			General Printable Character
+$			General Printable Character
+%			General Printable Character
+&			General Printable Character
+'			General Printable Character
+(			General Printable Character
+)			General Printable Character
+*			General Printable Character
++			General Printable Character
+,			General Printable Character
+-			General Printable Character
+.			General Printable Character
+/			General Printable Character
+0			Numerical Digit
+1			Numerical Digit
+2			Numerical Digit
+3			Numerical Digit
+4			Numerical Digit
+5			Numerical Digit
+6			Numerical Digit
+7			Numerical Digit
+8			Numerical Digit
+9			Numerical Digit
+:			General Printable Character
+;			General Printable Character
+<			General Printable Character
+=			General Printable Character
+>			General Printable Character
+?			General Printable Character
+@			General Printable Character
+A			Alphabet, capital case letter
+B			Alphabet, capital case letter
+C			Alphabet, capital case letter
+D			Alphabet, capital case letter
+E			Alphabet, capital case letter
+F			Alphabet, capital case letter
+G			Alphabet, capital case letter
+H			Alphabet, capital case letter
+I			Alphabet, capital case letter
+J			Alphabet, capital case letter
+K			Alphabet, capital case letter
+L			Alphabet, capital case letter
+M			Alphabet, capital case letter
+N			Alphabet, capital case letter
+O			Alphabet, capital case letter
+P			Alphabet, capital case letter
+Q			Alphabet, capital case letter
+R			Alphabet, capital case letter
+S			Alphabet, capital case letter
+T			Alphabet, capital case letter
+U			Alphabet, capital case letter
+V			Alphabet, capital case letter
+W			Alphabet, capital case letter
+X			Alphabet, capital case letter
+Y			Alphabet, capital case letter
+Z			Alphabet, capital case letter
+[			General Printable Character
+\			General Printable Character
+]			General Printable Character
+^			General Printable Character
+_			General Printable Character
+`			General Printable Character
+a			Alphabet, small case letter
+b			Alphabet, small case letter
+c			Alphabet, small case letter
+d			Alphabet, small case letter
+e			Alphabet, small case letter
+f			Alphabet, small case letter
+g			Alphabet, small case letter
+h			Alphabet, small case letter
+i			Alphabet, small case letter
+j			Alphabet, small case letter
+k			Alphabet, small case letter
+l			Alphabet, small case letter
+m			Alphabet, small case letter
+n			Alphabet, small case letter
+o			Alphabet, small case letter
+p			Alphabet, small case letter
+q			Alphabet, small case letter
+r			Alphabet, small case letter
+s			Alphabet, small case letter
+t			Alphabet, small case letter
+u			Alphabet, small case letter
+v			Alphabet, small case letter
+w			Alphabet, small case letter
+x			Alphabet, small case letter
+y			Alphabet, small case letter
+z			Alphabet, small case letter
+{			General Printable Character
+|			General Printable Character
+}			General Printable Character
+~			General Printable Character
+
+
+** Process exited - Return Code: 0 **
