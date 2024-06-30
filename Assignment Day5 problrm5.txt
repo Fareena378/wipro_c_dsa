@@ -1,0 +1,29 @@
+ASSIGNMENT DAY 5
+
+POINTERS
+
+Create a normal variable,Create a pointer variable,
+Store memory aadress of normal variable inside pointer variable,
+Read the value of normal variable and print on the screen using pointer variable only,
+Change the value of the normal variable to some other value using pointer variable only has context menu.
+
+
+Code:
+
+#include<stdio.h>
+int main()
+{
+   int y=20;//creating a normal variable
+   int *p;//creating a pointer variable
+   p=&y;//storing the address of the normal variable inside the pointer variable
+   printf("value of normal variable:%d\n",*p);//print the value of normal variable using pointer variable
+   *p=30;//updating the value of the normal  variable using pointer variable
+   printf("Updating the value of the normal variable:%d\n",*p);
+   return 0;
+}
+
+
+output:
+
+value of normal variable:20
+Updating the value of normal variable:30
