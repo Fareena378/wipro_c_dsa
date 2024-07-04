@@ -1,0 +1,54 @@
+
+
+
+
+Class assignment Day7:
+problem1:
+Create a C program to define similar type of structure and union.
+For e.g.
+struct person
+{
+  char name[50];
+  int aadhaarCard;
+  float salary;
+  char gender;
+};
+union person
+{
+  char name[50];
+  int aadhaarCard;
+  float salary;
+  char gender;
+};
+Compare their sizes in C program using 'sizeof' operator in C.
+has context menu
+
+code:
+
+#include<stdio.h>
+int main()
+{
+struct person1 
+{
+  char name[50];
+  int aadhaarCard;
+  float salary;
+  char gender;
+}s;
+union person2 
+{
+  char name[50];
+  int aadhaarCard;
+  float salary;
+  char gender;
+}u;
+printf("size of structure is %ld\n",sizeof(s));//here %ld used for long insigned int
+printf("size of union is %ld",sizeof(u));//here %ld used for long insigned int
+return 0;
+}   
+
+output:
+size of structure is 64
+size of union is 52
+
+** Process exited - Return Code: 0 **
