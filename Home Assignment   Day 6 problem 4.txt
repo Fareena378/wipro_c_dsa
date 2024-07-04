@@ -1,0 +1,53 @@
+Home Assignment Day 6:
+
+problem 4:
+ Check given string is palindrome. The string should be taken a constant string (string literal), 
+passed to function name 'int IsPalindrom(char *s)'. Use only pointers to work with string.
+String literal:
+char *myStr = "SomeString";
+Inside main():
+int result = IsPalindrom(myStr);
+// Check if the result = 1, then say Yes it is palindrome else say it is not the palindrome.
+Palindrome strings:
+aba, madam etc.
+has context menu
+
+code:
+
+#include <stdio.h>
+#include <string.h>
+
+// Function to check if a string is a palindrome
+int IsPalindrome(char *s) {
+    char *start = s;
+    char *end = s + strlen(s) - 1;
+
+    while (start < end) {
+        if (*start != *end) {
+            return 0;
+        }
+        start++;
+        end--;
+    }
+    return 1;
+}
+
+int main() {
+    char *myStr = "madam";
+    int result = IsPalindrome(myStr);
+
+    if (result == 1) {
+        printf("Yes, it is a palindrome.\n");
+    } else {
+        printf("No, it is not a palindrome.\n");
+    }
+
+    return 0;
+}
+ 
+output:
+
+Yes, it is a palindrome.
+
+
+** Process exited - Return Code: 0 **
