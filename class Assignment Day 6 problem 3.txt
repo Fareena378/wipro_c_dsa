@@ -1,0 +1,189 @@
+Class assignment:
+Write a C program that will try to change all characters of string "abc" to capital letters "ABC". Identify in which method you are able to change or not?
+Method 1:
+Char str[3];
+Scanf("%s", str);
+Method 2:
+Char str[3];
+Scanf("[^n]%s", str);
+Method 3:
+#include <sttring.h>
+Char str[3];
+Strcpy(str, "abc");
+Method 4:
+Char str[3] = "abc";
+Method 5:
+Char str[] = "abc";
+Method 6:
+Char *str = "abc";
+has context menu
+
+Method1 code:
+
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    // Method 1
+    char str1[3];
+    printf("Enter a string: \n");
+    scanf("%s", str1);
+    for (int i = 0; i < 3; i++) {
+        str1[i] = toupper(str1[i]); // convert to uppercase
+    }
+    printf("Method 1: %s\n", str1);// prints "ABC"
+    return 0;
+}
+
+Output:
+Enter a string: 
+abc
+Method 1: ABC
+
+
+** Process exited due to resource limitations **
+Method2 code:
+
+
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    // Method 2
+    char str1[3];
+    printf("Enter a string: \n");
+    scanf("[^n]%s",str1);
+    for (int i = 0; i < 3; i++) {
+        str1[i] = toupper(str1[i]); // convert to uppercase
+    }
+    printf("Method 2: %s\n", str1);// prints "ABC"
+    return 0;
+}
+
+output:
+
+Enter a string: 
+abc
+Method 2: 
+
+
+** Process exited - Return Code: 0 **
+
+Method 2 code:
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    // Method 2
+    char str2[3];
+    printf("Enter a string: \n");
+    scanf("[^n]%s", str2); 
+    for (int i = 0; i < 3; i++) {
+        str2[i] = toupper(str2[i]); // convert to uppercase
+    }
+    printf("Method 2: %s\n", str2); // prints "ABC"
+    return 0;
+}
+
+Output:
+Enter a string: 
+abc
+Method 2: 
+
+
+** Process exited - Return Code: 0 **
+
+Method 3 code:
+
+include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() #{
+      // Method 3
+    char str3[3];
+    strcpy(str3, "abc");
+    for (int i = 0; i < 3; i++) {
+        str3[i] = toupper(str3[i]); // convert to uppercase
+    }
+    printf("Method 3: %s\n", str3); // prints "ABC"
+    return 0;
+}
+
+
+output:
+
+Method 3: ABC
+
+
+** Process exited due to resource limitations **
+
+Method 4 code:
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+     // Method 4
+    char str4[4] = "abc";
+    for (int i = 0; i < 3; i++) {
+        str4[i] = toupper(str4[i]); // convert to uppercase
+    }
+    printf("Method 4: %s\n", str4); // prints "ABC"
+    return 0;
+}
+
+output:
+
+Method 4: ABC
+
+
+** Process exited - Return Code: 0 **
+
+
+Method 5 code:
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+     // Method 5
+    char str5[] = "abc";
+    for (int i = 0; i < 3; i++) {
+        str5[i] = toupper(str5[i]); // convert to uppercase
+    }
+    printf("Method 5: %s\n", str5); // prints "ABC"
+    return 0;
+}
+
+output:
+
+Method 5: ABC
+
+
+** Process exited - Return Code: 0 **
+
+Method 6:
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+     // Method 6
+    char *str6="abc";
+    //str6 is pointer to a string literal,cannot modify
+    printf("Method 6: %s\n", str6); // would print "abc"
+    return 0;
+}
+
+output:
+
+Method 6: abc
+
+
+** Process exited - Return Code: 0 **
+
