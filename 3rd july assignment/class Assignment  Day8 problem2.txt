@@ -1,0 +1,53 @@
+Class assignment Day8:
+
+problem 2:
+Create a following C function that reads 'n' characters from the file, character by character, show those characters on the screen:
+void ReadNCharacter(int n)
+{
+   // C haracter reading logic
+}
+
+
+CODE:
+ 
+#include <stdio.h>
+ 
+void ReadNCharacter(int n) {
+    FILE *file;
+    char ch;
+ 
+    file = fopen("filename.txt", "r");
+    if (file == NULL) {
+        printf("Error opening the file.\n");
+        return;
+    }
+ 
+    // Read and print 'n' characters
+    for (int i = 0; i < n; ++i) {
+        ch = fgetc(file);
+        if (ch == EOF) {
+            printf("Reached end of file.\n");
+            break;
+        }
+        putchar(ch);
+    }
+ 
+    // Close the file
+    fclose(file);
+}
+ 
+int main() {
+    int n;
+    printf("Enter the number of characters to read: ");
+    scanf("%d", &n);
+    ReadNCharacter(n);
+    return 0;
+}
+
+OUTPUT:
+Enter the number of characters to read: 
+5
+Error opening the file.
+
+
+** Process exited - Return Code: 0 **

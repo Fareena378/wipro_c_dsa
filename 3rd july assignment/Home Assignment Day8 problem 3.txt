@@ -1,0 +1,73 @@
+
+Home work Assignment Day 8:
+ 
+problem 3:
+
+Home work assignment:
+Write a C program to write a given string with spaces input by the user to the file using character by character method,and then create a new file
+and write all the content of the first file into the second file using character by character method. In short, we have create ourown C program that
+ will do copy - paste content of one file into another.
+
+
+CODE:
+
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char filename1[100], filename2[100], str[1000];
+    FILE *fp1, *fp2;
+
+    printf("Enter the name of the first file: ");
+    scanf("%s", filename1);
+
+    printf("Enter a string with spaces: ");
+    scanf("%[^\n]s", str); // read the string with spaces
+
+    fp1 = fopen(filename1, "w"); // open the first file in write mode
+    if (fp1 == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+
+    // write the string to the first file character by cha
+racter
+    for (int i = 0; i < strlen(str); i++) {
+        fputc(str[i], fp1);
+    }
+
+    fclose(fp1); // close the first file
+
+    printf("Enter the name of the second file: ");
+    scanf("%s", filename2);
+
+    fp1 = fopen(filename1, "r"); // open the first file in read mode
+    fp2 = fopen(filename2, "w"); // open the second file in write mode
+
+    if (fp1 == NULL || fp2 == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+
+    // copy the content of the first file to the second file character by character
+    char c;
+    while ((c = fgetc(fp1)) != EOF) {
+        fputc(c, fp2);
+    }
+
+    fclose(fp1); // close the first file
+    fclose(fp2); // close the second file
+
+    printf("File copied successfully!\n");
+
+    return 0;
+}
+
+OUTPUT:
+
+Enter the name of the first file: 
+c is a programming language
+Enter a string with spaces: Enter the name of the second file: 
+c contains functions
+File copied successfully!

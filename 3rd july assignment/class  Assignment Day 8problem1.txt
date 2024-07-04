@@ -1,0 +1,65 @@
+
+Class Assignment DAY 8:
+
+Problem 1;
+
+Class assignment:
+Write  a C program to write 'salary' of employee in text file.
+Write  a C program to read 'salary' of employee from already existing text file.
+
+CODE:
+#include <stdio.h>
+int main() {
+    FILE *fp;
+    char name[50];
+    float salary;
+ 
+    printf("Enter employee name: ");
+    scanf("%s", name);
+    printf("Enter employee salary: ");
+    scanf("%f", &salary);
+ 
+    fp = fopen("salary.txt", "w");
+    if (fp == NULL) {
+        printf("Error opening file!");
+        return 1;
+    }
+ 
+    fprintf(fp, "Name: %s\nSalary: %.2f\n", name, salary);
+    fclose(fp);
+ 
+    printf("Salary written to file successfully!\n");
+    return 0;
+}
+
+OUTPUT:
+Enter employee name: 
+Rani
+Enter employee salary: 
+25000.00
+Salary written to file successfully!
+CODE:
+//Read the file  -
+#include <stdio.h>
+int main() {
+    FILE *fp;
+    char name[20];
+    float salary;
+ 
+    fp = fopen("employee.txt", "r"); // Open file in read mode
+    if (fp == NULL) {
+        printf("Error opening file!");
+        return 1;
+    }
+ 
+    fscanf(fp, "Name: %s\nSalary: %f\n", name, &salary);
+    printf("Name: %s\nSalary: %.2f\n", name, salary);
+    fclose(fp);
+    return 0;
+}
+
+OUTPUT:
+
+Error opening file!
+
+** Process exited - Return Code: 1 **
